@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocket-WP | Contact Us</title>
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+  <script defer src="assets/js/alpine.js"></script>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body x-data="{ scrolled200: false, isOffcanvasOpen: false }" @scroll.window="scrolled200 = window.scrollY > 200">
+  <header :class="scrolled200 ? 'border-gray border-opacity-10' : 'border-transparent'"
+    class="transition-all duration-300 font-medium bg-[#fffc] backdrop-blur-sm z-30 min-w-max fixed p-2 sm:p-3 top-3 left-1/2 -translate-x-1/2 rounded-2xl border">
+    <div class="flex justify-between items-center gap-6 lg:gap-20">
+      <div class="logo">
+        <a href="#">
+          <img src="assets/images/logo.svg" alt="Logo Image">
+        </a>
+      </div>
+      <nav>
+        <ul class="hidden lg:flex gap-5 xl:gap-12">
+          <li>
+            <a href="#">Category1</a>
+          </li>
+          <li>
+            <a href="#">Category2</a>
+          </li>
+          <li>
+            <a href="#">Category3</a>
+          </li>
+          <li>
+            <a href="#">Category4</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-3 sm:gap-6 xl:gap-8">
+        <a href="#" class="hidden sm:block">
+          <img src="assets/images/github-stars.svg" alt="">
+        </a>
+        <div x-data="{ open: false }" class="relative hidden sm:block">
+          <button @click="open = !open"
+            class="flex items-center gap-2 bg-white py-2 px-4 lg:py-3 lg:px-6 rounded lg:rounded-xl hover:shadow transition-all peer">
+            <span>Download</span>
+            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 3.30981L5 7.30981L9 3.30981" stroke="#020817" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div x-show="open" @click.away="open = false"
+            class="absolute mt-2 min-w-max bg-white shadow-lg rounded-lg border border-gray/20 right-0 font-normal p-2"
+            x-transition>
+            <div class="divider">
+              <div x-data="{ open: false }" class="relative p-2">
+                <button @click="open = !open" class="w-full text-left hover:text-pink transition-all">
+                  linux (deb)
+                </button>
+                <div x-show="open" @click.away="open = false"
+                  class="absolute min-w-max bottom-[120%] left-0 border border-gray/20 bg-white mb-1 rounded-lg p-2 divider"
+                  x-transition>
+                  <div class="p-2 cursor-pointer flex items-center gap-2">
+                    <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                      <span>x86</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 11l5 5l5 -5" />
+                        <path d="M12 4l0 12" />
+                      </svg>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                      <path
+                        d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                    </svg>
+                  </div>
+                  <div class="p-2 cursor-pointer flex items-center gap-2">
+                    <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                      <span>ARM</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 11l5 5l5 -5" />
+                        <path d="M12 4l0 12" />
+                      </svg>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                      <path
+                        d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div x-data="{ open: false }" class="relative p-2">
+                <button @click="open = !open" class="w-full text-left hover:text-pink transition-all">
+                  macOS
+                </button>
+                <div x-show="open" @click.away="open = false"
+                  class="absolute min-w-max bottom-[120%] left-0 border border-gray/20 bg-white mb-1 rounded-lg p-2 divider"
+                  x-transition>
+                  <div class="p-2 cursor-pointer flex items-center gap-2">
+                    <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                      <span>M1/M2/M3</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 11l5 5l5 -5" />
+                        <path d="M12 4l0 12" />
+                      </svg>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                      <path
+                        d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                    </svg>
+                  </div>
+                  <div class="p-2 cursor-pointer flex items-center gap-2">
+                    <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                      <span>Intel</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 11l5 5l5 -5" />
+                        <path d="M12 4l0 12" />
+                      </svg>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                      <path
+                        d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div x-data="{ open: false }" class="relative p-2">
+                <button @click="open = !open" class="w-full text-left hover:text-pink transition-all">
+                  linux (rpm)
+                </button>
+                <div x-show="open" @click.away="open = false"
+                  class="absolute min-w-max bottom-[120%] left-0 border border-gray/20 bg-white mb-1 rounded-lg p-2 divider"
+                  x-transition>
+                  <div class="p-2 cursor-pointer flex items-center gap-2">
+                    <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                      <span>x86</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 11l5 5l5 -5" />
+                        <path d="M12 4l0 12" />
+                      </svg>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                      <path
+                        d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                    </svg>
+                  </div>
+                  <div class="p-2 cursor-pointer flex items-center gap-2">
+                    <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                      <span>ARM</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 11l5 5l5 -5" />
+                        <path d="M12 4l0 12" />
+                      </svg>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                      <path
+                        d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#"
+              class="block py-2 px-3 bg-blc-gradient text-white rounded-lg hover:opacity-90 transition-all m-2">View all
+              installation instructions</a>
+          </div>
+          <div
+            class="absolute -z-10 bg-gradient3 top-1/2 left-0 right-0 -translate-y-1/2 h-4 blur-lg peer-hover:opacity-0 transition-all">
+          </div>
+        </div>
+        <div>
+          <a href="#">Login</a>
+        </div>
+        <button @click="isOffcanvasOpen = true" class="lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-category-2">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M14 4h6v6h-6z" />
+            <path d="M4 14h6v6h-6z" />
+            <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="page-title my-100 pt-100">
+      <div class="container">
+        <div class="grid place-items-center text-center gap-6">
+          <div class="bg-[#8247FF] rounded-md bg-opacity-5">
+            <div class="bg-gradient1 bg-clip-text text-transparent py-1 px-3">
+              Don't be shy
+            </div>
+          </div>
+          <h1 class="text-h2">
+            We want to hear from you
+          </h1>
+          <p class="max-w-4xl">
+            Drop us an email, reach us on social media, or just fill out the form to find out how WP Rocket can help you
+            manage your environment or to request support.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="relative z-10 overflow-hidden">
+      <div class="container max-w-[600px]">
+        <form class="border border-gray rounded-xl sm:rounded-3xl p-6 sm:py-14 sm:px-8 space-y-6 bg-white/90">
+          <div class="space-y-3">
+            <div class="flex flex-col gap-2">
+              <label for="email" class="font-medium text-gray">Email*</label>
+              <input type="email" name="email" id="email"
+                class="border border-black border-opacity-20 rounded-lg sm:rounded-xl p-2 sm:p-3.5 outline-dark" autocomplete="off" required>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="firstName" class="font-medium text-gray">First name*</label>
+              <input type="text" name="firstName" id="firstName"
+                class="border border-black border-opacity-20 rounded-lg sm:rounded-xl p-2 sm:p-3.5 outline-dark">
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="laseName" class="font-medium text-gray">Last name*</label>
+              <input type="text" name="laseName" id="laseName"
+                class="border border-black border-opacity-20 rounded-lg sm:rounded-xl p-2 sm:p-3.5 outline-dark">
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="companyName" class="font-medium text-gray">Company name</label>
+              <input type="text" name="companyName" id="companyName"
+                class="border border-black border-opacity-20 rounded-lg sm:rounded-xl p-2 sm:p-3.5 outline-dark">
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="message" class="font-medium text-gray">Message</label>
+              <textarea name="message" id="message"
+                class="border border-black border-opacity-20 rounded-lg sm:rounded-xl p-2 sm:p-3.5 outline-dark"></textarea>
+            </div>
+          </div>
+          <p class="text-base">
+            WP-Rocket needs the contact information you provide to us to contact you about our products and services.
+            You may unsubscribe from these communications at any time. For more information please review our Privacy
+            Policy.
+          </p>
+          <button type="submit" class="bg-blc-gradient rounded-lg w-full p-2 text-white">Submit</button>
+        </form>
+        <div class="absolute -z-10 inset-0"><img src="assets/images/contact-bg.svg" alt="" class="size-full"></div>
+      </div>
+    </section>
+    <section class="links my-100 py-100 bg-secondary border-y border-[#E0E0E0]">
+      <div class="container max-w-[948px] space-y-14">
+        <div class="grid place-items-center text-center gap-6">
+          <h1 class="text-h2">
+            Let's talk
+          </h1>
+          <p>
+            We can be reached on any of the following channels. Let us know how we can help!
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-2 sm:gap-6">
+          <div class="border border-black/20 p-1 rounded-xl hover:border-black transition">
+            <a href="#" class="border border-black/20 rounded-xl flex justify-between items-center p-3 sm:px-4 sm:py-7">
+              <span>hello@Loremipsum.dev</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_155_1259)">
+                  <mask id="mask0_155_1259" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                    width="16" height="16">
+                    <path d="M0 0H16V16H0V0Z" fill="white" />
+                  </mask>
+                  <g mask="url(#mask0_155_1259)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.9397 3.35385C2.03563 3.25426 2.16982 3.19169 2.31672 3.19169H13.6833C13.8302 3.19169 13.9643 3.25423 14.0602 3.35378L8.00002 7.59594L1.94062 3.35437C1.94031 3.35419 1.94 3.35402 1.9397 3.35385ZM1.79179 5.43764V12.2415C1.79179 12.5282 2.03005 12.7665 2.31672 12.7665H13.6833C13.9699 12.7665 14.2082 12.5282 14.2082 12.2415V5.43736L8.51378 9.42346C8.2053 9.6394 7.79473 9.6394 7.48625 9.42346L1.7949 5.43952C1.79386 5.43911 1.79282 5.43849 1.79179 5.43764ZM2.31672 1.3999C1.04047 1.3999 0 2.44038 0 3.71662V12.2415C0 13.5178 1.04047 14.5583 2.31672 14.5583H13.6833C14.9595 14.5583 16 13.5178 16 12.2415V3.71662C16 2.44038 14.9595 1.3999 13.6833 1.3999H2.31672Z"
+                      fill="url(#paint0_linear_155_1259)" />
+                  </g>
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_155_1259" x1="8" y1="1.3999" x2="8" y2="14.5583"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <clipPath id="clip0_155_1259">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="border border-black/20 p-1 rounded-xl hover:border-black transition">
+            <a href="#" class="border border-black/20 rounded-xl flex justify-between items-center p-3 sm:px-4 sm:py-7">
+              <span>@wprocketdevelopment</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_155_1279)">
+                  <path
+                    d="M12.3271 0H14.651L9.5462 6.79111L15.5043 16H10.8186L7.1462 10.4L2.95572 16H0.63191L6.04143 8.73778L0.327148 0H5.12715L8.44143 5.11111L12.3271 0ZM11.5043 14.4H12.7919L4.44905 1.54667H3.06239L11.5119 14.4H11.5043Z"
+                    fill="url(#paint0_linear_155_1279)" />
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_155_1279" x1="7.91572" y1="0" x2="7.91572" y2="16"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <clipPath id="clip0_155_1279">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="border border-black/20 p-1 rounded-xl hover:border-black transition">
+            <a href="#" class="border border-black/20 rounded-xl flex justify-between items-center p-3 sm:px-4 sm:py-7">
+              <span>/Loremipsumdev</span>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_155_1324)">
+                  <path
+                    d="M0 1.29C0 0.5775 0.5925 0 1.32 0H16.68C17.4 0 18 0.5775 18 1.29V16.71C18 17.4225 17.4075 18 16.68 18H1.32C0.6 18 0 17.4225 0 16.71V1.29ZM5.5575 15.0675V6.9375H2.8575V15.075H5.5575V15.0675ZM4.2075 5.8275C5.1525 5.8275 5.7375 5.205 5.7375 4.425C5.7225 3.63 5.1525 3.0225 4.23 3.0225C3.3075 3.0225 2.7 3.6225 2.7 4.425C2.7 5.205 3.285 5.8275 4.1925 5.8275H4.2075ZM9.735 15.0675V10.53C9.735 10.2825 9.75 10.0425 9.825 9.87C10.02 9.3825 10.4625 8.88 11.205 8.88C12.18 8.88 12.5775 9.63 12.5775 10.7175V15.0675H15.2775V10.41C15.2775 7.905 13.9425 6.75 12.165 6.75C11.6761 6.73113 11.1913 6.84621 10.763 7.08282C10.3348 7.31942 9.97928 7.66856 9.735 8.0925V8.115H9.7125L9.735 8.0925V6.9375H7.035C7.065 7.7025 7.035 15.0675 7.035 15.0675H9.735Z"
+                    fill="url(#paint0_linear_155_1324)" />
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_155_1324" x1="9" y1="0" x2="9" y2="18"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <clipPath id="clip0_155_1324">
+                    <rect width="18" height="18" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="border border-black/20 p-1 rounded-xl hover:border-black transition">
+            <a href="#" class="border border-black/20 rounded-xl flex justify-between items-center p-3 sm:px-4 sm:py-7">
+              <span>@wprocketdev</span>
+              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_155_1326)">
+                  <path
+                    d="M16.7449 3.86571C16.5069 1.98857 14.8749 0.514286 12.9199 0.222857C12.5969 0.18 11.3559 0 8.48291 0H8.46591C5.59291 0 4.98091 0.171429 4.64941 0.222857C2.76241 0.514286 1.04541 1.83429 0.628915 3.73714C0.448306 4.69716 0.385501 5.67594 0.441915 6.65143C0.492915 8.02286 0.501415 9.37714 0.628915 10.7314C0.713915 11.64 0.858415 12.5314 1.07091 13.4143C1.47041 15.0429 3.07691 16.3971 4.64941 16.9457C6.52682 17.5838 8.55315 17.6257 10.4549 17.0657C10.8799 16.9371 11.3729 16.7829 11.7299 16.5171C11.7358 16.515 11.7411 16.5116 11.7455 16.5071C11.7499 16.5027 11.7533 16.4973 11.7554 16.4914V15.1543C11.7502 15.1459 11.7422 15.1397 11.7329 15.1365C11.7237 15.1334 11.7136 15.1336 11.7044 15.1371C10.5994 15.3943 9.45191 15.5314 8.30441 15.5314C6.34092 15.5314 5.80541 14.5971 5.66091 14.2114C5.53902 13.8632 5.46467 13.4999 5.43991 13.1314C5.44528 13.1291 5.45106 13.1279 5.45691 13.1279C5.46276 13.1279 5.46855 13.1291 5.47391 13.1314C6.57041 13.3886 7.68391 13.5257 8.81441 13.5257L9.63041 13.5171C10.7814 13.5071 11.9298 13.4039 13.0644 13.2086L13.1494 13.1914C14.9004 12.8486 16.5749 11.7943 16.7449 9.11143L16.7704 7.90286C16.7704 7.52571 16.8894 5.26286 16.7534 3.86571H16.7449ZM14.0504 10.5514H12.1974V6.03429C12.1974 5.08286 11.7979 4.59429 10.9904 4.59429C10.1064 4.59429 9.66441 5.16857 9.66441 6.30857V8.77714H7.81991V6.3C7.81991 5.16857 7.36941 4.58571 6.48541 4.58571C5.67791 4.58571 5.27841 5.08286 5.27841 6.03429V10.5514H3.44241V5.89714C3.44241 4.94571 3.68891 4.18286 4.17341 3.62571C4.42131 3.34838 4.72613 3.12882 5.06668 2.98228C5.40722 2.83574 5.77533 2.76574 6.14541 2.77714C7.09741 2.77714 7.81141 3.13714 8.28741 3.86571L8.74641 4.63714L9.20541 3.86571C9.43544 3.51184 9.75355 3.22505 10.128 3.03402C10.5024 2.84299 10.9199 2.75441 11.3389 2.77714C11.7104 2.76448 12.0802 2.83386 12.4223 2.98045C12.7644 3.12703 13.0706 3.34726 13.3194 3.62571C13.8039 4.18286 14.0504 4.93714 14.0504 5.89714V10.5514Z"
+                    fill="url(#paint0_linear_155_1326)" />
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_155_1326" x1="8.62024" y1="0" x2="8.62024" y2="17.457"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <clipPath id="clip0_155_1326">
+                    <rect width="17" height="18" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="border border-black/20 p-1 rounded-xl hover:border-black transition">
+            <a href="#" class="border border-black/20 rounded-xl flex justify-between items-center p-3 sm:px-4 sm:py-7">
+              <span>wprocketcommunitygroup</span>
+              <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_155_1328)">
+                  <path
+                    d="M6.81887 0.746645C5.9037 0.920964 5.25 1.72719 5.25 2.66415C5.25 3.44133 5.64222 4.07323 6.34676 4.42187C6.74624 4.61798 6.79708 4.62524 7.95921 4.62524H9.15765V3.4268C9.15765 2.36636 9.13586 2.19204 9.00512 1.89425C8.62017 1.0517 7.70499 0.572326 6.81887 0.746645Z"
+                    fill="url(#paint0_linear_155_1328)" />
+                  <path
+                    d="M11.7145 0.746754C11.2715 0.848439 10.901 1.0736 10.6178 1.40045C10.1384 1.95972 10.1311 2.05415 10.1529 5.25C10.1747 8.05363 10.1747 8.119 10.3345 8.41679C10.6831 9.06323 11.424 9.52808 12.0995 9.52808C12.775 9.52808 13.5158 9.06323 13.8645 8.41679C14.0242 8.119 14.0242 8.05363 14.046 5.25C14.0678 2.02509 14.0606 1.95246 13.5521 1.3714C13.1091 0.870229 12.3174 0.601487 11.7145 0.746754Z"
+                    fill="url(#paint1_linear_155_1328)" />
+                  <path
+                    d="M1.61837 5.71485C1.20436 5.86738 0.819408 6.20149 0.601509 6.6155C0.165712 7.40719 0.296451 8.27879 0.935621 8.91796C1.53121 9.51355 1.61837 9.52808 4.76338 9.52808C7.77765 9.52808 7.93017 9.50629 8.48219 9.01965C9.07778 8.49669 9.32473 7.51614 9.03419 6.83339C8.85988 6.43391 8.40229 5.96906 7.99554 5.78022C7.63238 5.6059 7.61785 5.6059 4.76338 5.61316C2.48997 5.61316 1.83627 5.63495 1.61837 5.71485Z"
+                    fill="url(#paint2_linear_155_1328)" />
+                  <path
+                    d="M16.3486 5.70032C15.9491 5.85285 15.6077 6.10706 15.4116 6.3976C15.0848 6.86971 15.0049 7.26193 15.0049 8.45311V9.52808H16.1162C17.3582 9.52808 17.6051 9.47723 18.099 9.14312C18.6147 8.80175 18.8835 8.32963 18.9125 7.69773C18.9634 6.83339 18.5566 6.12885 17.8013 5.78022C17.3945 5.59137 16.7335 5.55505 16.3486 5.70032Z"
+                    fill="url(#paint3_linear_155_1328)" />
+                  <path
+                    d="M1.77133 10.574C0.630988 10.8791 0.0136079 12.2519 0.543828 13.2978C0.92152 14.0241 1.50985 14.3945 2.28702 14.3945C3.10051 14.3945 3.77599 13.966 4.10284 13.2324C4.23358 12.9491 4.25537 12.753 4.25537 11.6853V10.4724L3.18767 10.4796C2.57029 10.4796 1.96743 10.5232 1.77133 10.574Z"
+                    fill="url(#paint4_linear_155_1328)" />
+                  <path
+                    d="M6.59359 10.6031C6.06337 10.7919 5.70747 11.1042 5.45325 11.5981L5.23535 12.0267V14.9029V17.7792L5.45325 18.2077C5.71473 18.7234 6.136 19.0648 6.7098 19.2318C7.75572 19.5369 8.88879 18.8178 9.12121 17.7066C9.17206 17.4378 9.19385 16.4282 9.17932 14.6705C9.15753 12.1719 9.15027 12.0194 9.005 11.7071C8.77984 11.2277 8.5111 10.9372 8.0753 10.7265C7.55961 10.4723 7.08023 10.436 6.59359 10.6031Z"
+                    fill="url(#paint5_linear_155_1328)" />
+                  <path
+                    d="M11.4601 10.6104C10.7483 10.8573 10.2254 11.5255 10.16 12.2882C10.0874 13.0944 10.5377 13.8861 11.2568 14.2202C11.6272 14.3945 11.6344 14.3945 14.4889 14.3945C16.4718 14.3945 17.4378 14.3655 17.6339 14.3074C17.7937 14.2638 18.0697 14.0895 18.2513 13.9297C19.3117 13 19.1011 11.3222 17.8518 10.712L17.4378 10.5087L14.6415 10.4941C12.0702 10.4724 11.816 10.4869 11.4601 10.6104Z"
+                    fill="url(#paint6_linear_155_1328)" />
+                  <path
+                    d="M10.1531 16.6607C10.1749 17.7865 10.1894 17.9463 10.3347 18.215C10.5235 18.5709 11.0029 19.014 11.366 19.1738C11.7074 19.319 12.4919 19.319 12.8332 19.1738C13.1964 19.014 13.6758 18.5636 13.8574 18.215C14.3367 17.278 13.9009 16.0288 12.9422 15.5857C12.6008 15.4259 12.4773 15.4114 11.3515 15.4114H10.124L10.1531 16.6607Z"
+                    fill="url(#paint7_linear_155_1328)" />
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_155_1328" x1="7.20383" y1="4.62524" x2="7.20383" y2="0.71106"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_155_1328" x1="12.0994" y1="9.52808" x2="12.0994" y2="0.707483"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <linearGradient id="paint2_linear_155_1328" x1="4.75134" y1="9.52808" x2="4.75134" y2="5.61091"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <linearGradient id="paint3_linear_155_1328" x1="16.9608" y1="9.52808" x2="16.9608" y2="5.6112"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <linearGradient id="paint4_linear_155_1328" x1="2.30347" y1="14.3945" x2="2.30347" y2="10.4724"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <linearGradient id="paint5_linear_155_1328" x1="7.20955" y1="19.3022" x2="7.20955" y2="10.5011"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <linearGradient id="paint6_linear_155_1328" x1="14.5426" y1="14.3945" x2="14.5426" y2="10.4857"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <linearGradient id="paint7_linear_155_1328" x1="12.0887" y1="19.2827" x2="12.0887" y2="15.4114"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <clipPath id="clip0_155_1328">
+                    <rect width="18.6667" height="18.6667" fill="white" transform="translate(0.333008 0.666748)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="border border-black/20 p-1 rounded-xl hover:border-black transition">
+            <a href="#" class="border border-black/20 rounded-xl flex justify-between items-center p-3 sm:px-4 sm:py-7">
+              <span>@wprocketdev</span>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_155_1338)">
+                  <path
+                    d="M9.00016 0.225098C6.86653 0.229925 4.804 0.99262 3.18054 2.37711C1.55709 3.76161 0.478305 5.67784 0.136656 7.78395C-0.204992 9.89007 0.212716 12.0491 1.31526 13.8758C2.4178 15.7025 4.13346 17.078 6.15616 17.7571C6.60616 17.8471 6.77716 17.5771 6.77716 17.3341L6.75016 15.6601C4.49116 16.0741 3.90616 15.1021 3.72616 14.5981C3.62716 14.3371 3.18616 13.5451 2.79916 13.3291C2.48416 13.1581 2.03416 12.7441 2.79916 12.7351C3.50116 12.7171 4.00516 13.3831 4.17616 13.6531C4.98616 15.0121 6.28216 14.6341 6.79516 14.4001C6.83388 13.9414 7.03869 13.5125 7.37116 13.1941C5.37316 12.9691 3.27616 12.1951 3.27616 8.7481C3.26246 7.8536 3.59082 6.98762 4.19416 6.3271C3.91959 5.54961 3.95178 4.69668 4.28416 3.9421C4.28416 3.9421 5.04016 3.7081 6.76816 4.8691C8.23991 4.45739 9.79641 4.45739 11.2682 4.8691C12.9782 3.6991 13.7432 3.9421 13.7432 3.9421C14.2292 5.1841 13.9232 6.1021 13.8332 6.3271C14.4002 6.9571 14.7512 7.7671 14.7512 8.7571C14.7512 12.2041 12.6452 12.9691 10.6472 13.1941C10.9712 13.4731 11.2502 14.0131 11.2502 14.8591L11.2412 17.3341C11.2412 17.5681 11.4122 17.8471 11.8622 17.7571C13.865 17.0583 15.5573 15.676 16.6418 13.853C17.7263 12.03 18.1334 9.88301 17.7917 7.78954C17.4499 5.69606 16.3812 3.79006 14.7732 2.40657C13.1653 1.02308 11.1212 0.250662 9.00016 0.225098Z"
+                    fill="url(#paint0_linear_155_1338)" />
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_155_1338" x1="8.965" y1="0.225098" x2="8.965" y2="17.7748"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1B1B1B" stop-opacity="0.7" />
+                    <stop offset="1" stop-color="#1B1B1B" />
+                  </linearGradient>
+                  <clipPath id="clip0_155_1338">
+                    <rect width="18" height="18" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="empower pb-100 overflow-hidden">
+      <div class="container relative">
+        <div class="grid place-items-center gap-6 text-center mx-auto">
+          <div>
+            <img src="assets/images/rocket.png" alt="" class="xl:mb-14 rotate-45 max-w-40 sm:max-w-64">
+          </div>
+          <h2 class="text-h2 font-semibold">
+            <span class="bg-blc-gradient text-transparent bg-clip-text">Empowering</span>
+            <span class="bg-gradient1 text-transparent bg-clip-text inline-flex items-center gap-2">
+              <span>Speed</span>
+              <img src="assets/images/stars.svg" alt="">
+            </span>
+          </h2>
+          <p class="max-w-xl">
+            Take full control of your site's speed and performance with WP Rocket for a faster, smoother, and more
+            efficient WordPress experience.
+          </p>
+          <div class="flex text-white gap-2 sm:gap-6">
+            <div class="download-btn relative z-10">
+              <select name="downloadBtn" id="downloadBtn"
+                class="bg-gradient5 rounded xl:rounded-lg py-2 pl-6 pr-11 appearance-none outline-none w-full">
+                <option value="">Download</option>
+                <option value="">Download</option>
+                <option value="">Download</option>
+              </select>
+              <div class="absolute select-none top-1/2 right-6 -translate-y-1/2">
+                <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 3.30981L5 7.30981L9 3.30981" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <button class="bg-blc-gradient py-2 px-6 rounded xl:rounded-lg">
+              Contact us
+            </button>
+          </div>
+        </div>
+        <div class="grid-bg absolute -inset-40 -z-10"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="pb-100 font-medium relative">
+    <div class="container space-y-6 md:space-y-14">
+      <div class="flex items-center gap-4">
+        <div class="grow bg-[linear-gradient(90deg,#FFFFFF_0.29%,#BBBBBB_32.65%,#BBBBBB_98.74%)] h-[1px] opacity-50">
+        </div>
+        <div><img src="assets/images/logo.svg" alt=""></div>
+        <div class="grow bg-[linear-gradient(-90deg,#FFFFFF_0.29%,#BBBBBB_32.65%,#BBBBBB_98.74%)] h-[1px] opacity-50">
+        </div>
+      </div>
+      <nav>
+        <ul class="flex justify-center flex-wrap">
+          <li>
+            <a href="#" class="block py-1 px-2 md:p-3 lg:px-6">Category1</a>
+          </li>
+          <li>
+            <a href="#" class="block py-1 px-2 md:p-3 lg:px-6">Category2</a>
+          </li>
+          <li>
+            <a href="#" class="block py-1 px-2 md:p-3 lg:px-6">Category3</a>
+          </li>
+          <li>
+            <a href="#" class="block py-1 px-2 md:p-3 lg:px-6">Category4</a>
+          </li>
+          <li>
+            <a href="#" class="block py-1 px-2 md:p-3 lg:px-6 text-gray">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="block py-1 px-2 md:p-3 lg:px-6 text-gray">Terms & Conditions</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-wrap gap-6 md:gap-12 justify-center text-gray">
+        <div x-data="{ year: new Date().getFullYear() }">
+          <span>©</span>
+          <span x-text="year">2025</span>
+          <span>Flox. All rights reserved.</span>
+        </div>
+        <ul class="flex gap-4">
+          <li>
+            <a href="#"><img src="assets/images/socials1.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="assets/images/socials2.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="assets/images/socials3.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="assets/images/socials4.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="assets/images/socials5.svg" alt=""></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <img src="assets/images/footer-bg.svg" alt="" class="absolute left-0 right-0 bottom-0">
+  </footer>
+  <!-- Offcanvas Mobile menu -->
+  <div x-show="isOffcanvasOpen" x-transition:enter="transition ease-out duration-300 transform"
+    x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
+    x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="translate-x-0"
+    x-transition:leave-end="translate-x-full" @click.away="isOffcanvasOpen = false"
+    class="fixed top-0 right-0 h-full w-[320px] bg-white shadow-lg z-50 flex flex-col">
+    <div class="text-end p-4">
+      <button @click="isOffcanvasOpen = false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M18 6l-12 12" />
+          <path d="M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div class="p-6 pt-0 grow flex flex-col justify-between">
+      <nav>
+        <ul class="flex flex-col gap-5">
+          <li>
+            <a href="#">Category1</a>
+          </li>
+          <li>
+            <a href="#">Category2</a>
+          </li>
+          <li>
+            <a href="#">Category3</a>
+          </li>
+          <li>
+            <a href="#">Category4</a>
+          </li>
+        </ul>
+      </nav>
+      <div x-data="{ open: false }" class="relative">
+        <button @click="open = !open"
+          class="flex items-center gap-2 bg-white py-2 px-4 lg:py-3 lg:px-6 rounded lg:rounded-xl hover:shadow transition-all peer w-full justify-between">
+          <span>Download</span>
+          <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.30981L5 7.30981L9 3.30981" stroke="#020817" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div x-show="open" @click.away="open = false"
+          class="absolute bottom-[120%] right-0 min-w-max bg-white shadow-lg rounded-lg border border-gray/20 font-normal p-2"
+          x-transition>
+          <div class="divider">
+            <div x-data="{ open: false }" class="relative p-2">
+              <button @click="open = !open" class="w-full text-left hover:text-pink transition-all">
+                linux (deb)
+              </button>
+              <div x-show="open" @click.away="open = false"
+                class="absolute min-w-max bottom-[120%] left-0 border border-gray/20 bg-white mb-1 rounded-lg p-2 divider"
+                x-transition>
+                <div class="p-2 cursor-pointer flex items-center gap-2">
+                  <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                    <span>x86</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                      <path d="M7 11l5 5l5 -5" />
+                      <path d="M12 4l0 12" />
+                    </svg>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                    <path
+                      d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                  </svg>
+                </div>
+                <div class="p-2 cursor-pointer flex items-center gap-2">
+                  <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                    <span>ARM</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                      <path d="M7 11l5 5l5 -5" />
+                      <path d="M12 4l0 12" />
+                    </svg>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                    <path
+                      d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div x-data="{ open: false }" class="relative p-2">
+              <button @click="open = !open" class="w-full text-left hover:text-pink transition-all">
+                macOS
+              </button>
+              <div x-show="open" @click.away="open = false"
+                class="absolute min-w-max bottom-[120%] left-0 border border-gray/20 bg-white mb-1 rounded-lg p-2 divider"
+                x-transition>
+                <div class="p-2 cursor-pointer flex items-center gap-2">
+                  <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                    <span>M1/M2/M3</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                      <path d="M7 11l5 5l5 -5" />
+                      <path d="M12 4l0 12" />
+                    </svg>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                    <path
+                      d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                  </svg>
+                </div>
+                <div class="p-2 cursor-pointer flex items-center gap-2">
+                  <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                    <span>Intel</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                      <path d="M7 11l5 5l5 -5" />
+                      <path d="M12 4l0 12" />
+                    </svg>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                    <path
+                      d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div x-data="{ open: false }" class="relative p-2">
+              <button @click="open = !open" class="w-full text-left hover:text-pink transition-all">
+                linux (rpm)
+              </button>
+              <div x-show="open" @click.away="open = false"
+                class="absolute min-w-max bottom-[120%] left-0 border border-gray/20 bg-white mb-1 rounded-lg p-2 divider"
+                x-transition>
+                <div class="p-2 cursor-pointer flex items-center gap-2">
+                  <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                    <span>x86</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                      <path d="M7 11l5 5l5 -5" />
+                      <path d="M12 4l0 12" />
+                    </svg>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                    <path
+                      d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                  </svg>
+                </div>
+                <div class="p-2 cursor-pointer flex items-center gap-2">
+                  <span class="flex items-center gap-10 grow justify-between hover:text-pink transition-all">
+                    <span>ARM</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                      <path d="M7 11l5 5l5 -5" />
+                      <path d="M12 4l0 12" />
+                    </svg>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-copy hover:text-pink transition-all">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                    <path
+                      d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#"
+            class="block py-2 px-3 bg-blc-gradient text-white rounded-lg hover:opacity-90 transition-all m-2">View all
+            installation instructions</a>
+        </div>
+        <div
+          class="absolute -z-10 bg-gradient3 top-1/2 left-0 right-0 -translate-y-1/2 h-4 blur-lg peer-hover:opacity-0 transition-all">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div x-show="isOffcanvasOpen" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-50 z-40"
+    @click="isOffcanvasOpen = false"></div>
+  <!-- Offcanvas Mobile menu -->
+  <!-- Go to top button -->
+  <div x-data="{ scrollY: 0, showButton: false, scrollPercent: 0 }" x-init="window.addEventListener('scroll', () => { 
+      scrollY = window.scrollY; 
+      let maxScroll = document.body.scrollHeight - window.innerHeight;
+      scrollPercent = (scrollY / maxScroll) * 100;
+      showButton = scrollY > 300;
+  })" class="fixed bottom-6 right-6 z-50">
+    <button @click="window.scrollTo({ top: 0, behavior: 'smooth' })" x-show="showButton" x-transition
+      class="relative w-12 h-12 flex items-center justify-center rounded-full shadow-lg bg-white focus:outline-none text-[#b73eee] border border-[#b73eee]">
+      <svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+        <circle class="text-gray text-opacity-10" stroke-width="8" stroke="currentColor" fill="transparent" r="40"
+          cx="50" cy="50">
+        </circle>
+        <circle class="text-[#b952e9] transition-all duration-100" stroke-width="8" stroke="currentColor"
+          fill="transparent" r="40" cx="50" cy="50" stroke-dasharray="251.2"
+          :stroke-dashoffset="251.2 - (scrollPercent / 100 * 247.5)">
+        </circle>
+      </svg>
+      ↑
+    </button>
+  </div>
+  <!-- Go to top button -->
+</body>
+
+</html>
